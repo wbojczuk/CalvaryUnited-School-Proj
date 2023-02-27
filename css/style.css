@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding:0;
+}
+#pageID{
+    display: none;
+}
+body{
+    font-family: "Kanit", sans-serif;
+    color: white;
+    background-color: #F9F9F9;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    font-size: 7vw;
+    font-weight: 400;
+}
+h2{
+    font-size: 4vw;
+    font-weight: 200;
+    position: relative;
+}
+
+header{
+    width: 100%;
+    height: 80vh;
+    background-image: url("../img/manbg.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+header::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    z-index: 990;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+header h1, header h2{
+    position: relative;
+    z-index: 997;
+}
+
+header h1{
+    margin: 5vh 0 0 5vw;
+    opacity: 0;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transform: translateY(50px);
+}
+header h2{
+    margin-left: 6vw;
+    top: -2vw;
+    font-size: 8vw;
+    font-family: "Hurricane", cursive;
+    font-weight: 200;
+    opacity: 0;
+    transform: translateY(-50px);
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+
+.button-one{
+    background-color: #535E88;
+    display: inline-block;
+    width: 10vw;
+    text-align: center;
+    padding: 0.5vw 0;
+    font-size: 1.1vw;
+    position: relative;
+    z-index: 997;
+    transition: 0.3s background-color;
+}
+.button-one:hover{
+    background-color: #333953;
+    text-decoration: underline;
+}
+
+#mainButtonWrapper{
+    position: absolute;
+    bottom: 10vh;
+    left: 5vw;
+}
+
+#mainButtonWrapper .button-one{
+    margin: 2vw 1.5vw;
+}
+
+/* Times Section */
+#timesSection{
+    background-color: #1D2132;
+    padding: 1vw 2vw;
+}
+#timesSection h2{
+    width: 35%;
+    text-align: right;
+    display: inline-block;
+}
+#timesSection h2::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    z-index: 990;
+    height: 80%;
+    aspect-ratio: 1/1;
+    background-image: url("../img/clock.svg");
+    background-size: 100%;
+    top:10%;
+    left:0;
+}
+#timesGrid{
+    display: inline-grid;
+    width: 50%;
+    margin-left: 5vw;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+}
+
+.time-item{
+    padding: 0.5vw;
+    text-align: center;
+}
+.time-item{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    margin: 0.5vw 0;
+}
+
+.time-item .title{
+    font-size: 1.5vw;
+}
+.time-item .day{
+    font-size: 1.2vw;
+    font-style: italic;
+}
+.time-item .time{
+    font-size: 2vw;
+}
+
+/* Location Section */
+#locationSection{
+    background-color: #535E88;
+    padding: 0.5vw 2vw;
+}
+#locationSection h2{
+    width: 35%;
+    text-align: center;
+    padding-right: calc(5vw + 3px);
+    display: inline-block;
+    border-right: 1px solid white;
+}
+#locationSection h2::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    z-index: 990;
+    height: 80%;
+    aspect-ratio: 1/1;
+    background-image: url("../img/location.svg");
+    background-size: 100%;
+    top:10%;
+    left:0;
+}
+
+#locationSection .location{
+    position: relative;
+    top: 0.3vw;
+    display: inline-block;
+    font-size: 1.5vw;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+}
+
+#pastorSection{
+    color: black;
+}
+
+#pastorSection h2{
+    font-weight: 200;
+    text-align: center;
+    margin-top: 2vw;
+}
+#pastorSection h4{
+    font-weight: 600;
+    text-align: center;
+    font-size: 2vw;
+}
+#pastorWrapper{
+    padding: 5vw 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    font-size: 1.2vw;
+}
+#pastorWrapper span{
+    display: inline-block;
+    width: 50%;
+    font-weight: 300;
+}
+
+/* MOBILE STYLES */
+@media only screen and (max-width: 600px)  {
+    h1{
+        font-size: 6vh;
+    }
+    h2{
+        font-size: 4vh;
+        text-align: center;
+    }
+    
+    header{
+        width: 100%;
+        height: 80vh;
+        background-image: url("../img/manbg.jpg");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        padding-top: 20vh;
+    }
+    
+    header h1{
+        margin: 0;
+        position: relative;
+        text-align: center;
+    }
+    header h2{
+        margin-left: 0;
+        font-size: 8vh;
+    }
+    
+    .button-one{
+        width: 15vh;
+        padding: 1vh 0;
+        font-size: 2vh;
+    }
+    
+    #mainButtonWrapper{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        bottom: 10vh;
+        left: 0;
+    }
+    
+    #mainButtonWrapper .button-one{
+        margin: 2vw 1.5vh;
+    }
+    
+    /* Times Section */
+    #timesSection h2{
+        width: 100%;
+        text-align: center;
+    }
+    #timesSection h2::after{
+        top:10%;
+        left:8%;
+    }
+    #timesGrid{
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    .time-item{
+        padding: 0.5vh;
+    }
+    .time-item{
+        margin: 0.5vh 0;
+    }
+    
+    .time-item .title{
+        font-size: 1.5vh;
+    }
+    .time-item .day{
+        font-size: 1.2vh;
+    }
+    .time-item .time{
+        font-size: 2vh;
+    }
+    
+    /* Location Section */
+    #locationSection h2{
+        width: 100%;
+        border-right: none;
+    }
+    #locationSection h2::after{
+        left:18%;
+    }
+    
+    #locationSection .location{
+        padding-top: 1vh;
+        font-size: 2vh;
+        width: 100%;
+    }
+
+    #pastorSection h4{
+        font-size: 2vh;
+    }
+    #pastorWrapper{
+        font-size: 1.5vh;
+    }
+    #pastorWrapper img{
+        display: none;
+    }
+    #pastorWrapper span{
+        width: 80%;
+    }
+}

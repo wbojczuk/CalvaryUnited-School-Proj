@@ -1,0 +1,128 @@
+#mainNav{
+    font-weight: 200;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    font-size: 1.3vw;
+    position: relative;
+    z-index: 999;
+    width: 100vw;
+}
+#navLinkWrapper{
+    margin: 2.5vw 4vw;
+}
+nav a{
+    transition: 0.3s color;
+    margin: 0 2vw;
+    position: relative;
+}
+
+nav#mainNav.secondary{
+    background-color: #222222;
+    justify-content: space-between;
+}
+nav#mainNav.secondary #navLinkWrapper{
+    margin: 1vw 4vw;
+    font-size: 1.5vw;
+}
+nav#mainNav.secondary #navLogo{
+    display: inline-block;
+    font-family: "Hurricane", cursive;
+    font-weight: 200;
+    font-size: 3vw;
+    margin-left: 0;
+}
+
+nav a.active::after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 80%;
+    width: 2px;
+    top: 10%;
+    left: -20%;
+    background-color: white;
+}
+
+nav a:hover{
+    color: rgb(204, 204, 204);
+}
+#mobileNavExit{
+    display: none;
+}
+#mobileNavMenu{
+    display: none;
+}
+#navLogo{
+    display: none;
+}
+
+/* MOBILE STYLES */
+@media only screen and (max-width: 600px)  {
+    #mainNav{
+        justify-content: space-between;
+        height: 5vh;
+        padding-top:0;
+        padding-bottom:0;
+        background-color: #222222;
+        position: fixed;
+        top:0;
+        left:0;
+        padding:0;
+    }
+    nav a{
+        color: black;
+        font-size: 2.5vh;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+    nav a:nth-last-child(1){
+        border-bottom: none;
+    }
+    #navLinkWrapper{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        display: inline-block;
+        position: absolute;
+        right:0;
+        top: 100%;
+        width: 50%;
+        background-color: white;
+        color: black;
+        margin: 0;
+        border: 1px solid black;
+    }
+    nav#mainNav.secondary #navLinkWrapper{
+        margin: 0;
+    }
+    #mobileNavExit, #mobileNavMenu{
+        display: inline-block;
+        height: 110%;
+        aspect-ratio: 1/1;
+        position: absolute;
+        right:2%;
+        top:0;
+        cursor: pointer;
+        background-size: 100%;
+        background-position: center;
+    }
+    #mobileNavMenu{
+        background-image: url("../img/hamburger_menu.svg");
+    }
+    #mobileNavExit{
+        background-image: url("../img/exit.svg");
+        transform: scale(0);
+    }
+    #navLogo{
+        display: inline-block;
+        font-family: "Hurricane", cursive;
+        font-weight: 200;
+        font-size: 3vh;
+        margin-left: 5vw;
+        color: white
+    }
+    #navLogo a{
+        font-size: 3vh;
+        color: white
+    }
+}
