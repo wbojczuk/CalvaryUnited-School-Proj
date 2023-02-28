@@ -23,7 +23,7 @@ const animsObj = {
                 "transform":"translateY(0)"
             }, "-=.8")
         }
-        bgIMG.src = "../img/mainbg.jpg";
+        bgIMG.src = "./img/mainbg.jpg";
         
     }
 }
