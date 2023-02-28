@@ -31,7 +31,6 @@ h2{
 header{
     width: 100%;
     height: 80vh;
-    background-image: url("../img/manbg.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -76,7 +75,7 @@ header h2{
     width: 10vw;
     text-align: center;
     padding: 0.5vw 0;
-    font-size: 1.1vw;
+    font-size: 1.5vw;
     position: relative;
     z-index: 997;
     transition: 0.3s background-color;
@@ -88,7 +87,7 @@ header h2{
 
 #mainButtonWrapper{
     position: absolute;
-    bottom: 10vh;
+    bottom: 5vh;
     left: 5vw;
 }
 
