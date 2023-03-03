@@ -1,5 +1,9 @@
 const navObj = {
     init: ()=>{
+
+        // Set Active Nav Item
+        document.getElementById(`${document.getElementById("pageID").dataset.value}Link`).classList.add("active");
+
         // Mobile Menu Listeners
         const exitButton = document.getElementById("mobileNavExit");
         const menuButton = document.getElementById("mobileNavMenu");

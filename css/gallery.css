@@ -27,6 +27,11 @@
     transition: 0.3s width ease-in-out, 0.3s left ease-in-out;
 }
 
+#albumBar a.active::after{
+    width: 80%;
+    left: 10%;
+}
+
 #albumBar a:hover::after{
     width: 80%;
     left: 10%;
@@ -37,17 +42,23 @@
 }
 
 #galleryContainer{
-    margin: 5vw 0 0 5%;
+    display: inline-block;
+    position: relative;
     width: 90%;
-    min-height: 5vw;
-    background-color: #dddddd;;
+    padding: 5vh 0;
+}
+
+.gallery-item{
+    object-fit: contain;
+    background-color: #ececec;
+    position: absolute;
 }
 
 /* MOBILE STYLES */
 @media only screen and (max-width: 600px)  {
-    #albumBar a::after{
+    /* #albumBar a::after{
         display: none;
-    }
+    } */
     #albumBar a{
         font-size: 1.5vh;
         padding: 0 1vh;
@@ -55,5 +66,8 @@
     #albumBar{
         padding: 1vh;
         margin-top: 10vh;
+    }
+    .gallery-item{
+        max-width: 100%;
     }
 }

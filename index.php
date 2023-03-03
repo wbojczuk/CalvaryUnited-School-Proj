@@ -1,3 +1,7 @@
+<?php
+   $GLOBALS["page_id"] = "home";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,17 +19,11 @@
     <script src="./js/anims.js" defer></script>
 </head>
 <body>
-    <div id="pageID" data-value="home"></div>
     <header>
-        <nav id="mainNav">
-            <div id="navLogo"><a href="./index.html">Calvary Methodist</a></div>
-            <div id="mobileNavExit"></div>
-            <div id="mobileNavMenu"></div>
-            <div id="navLinkWrapper">
-                <a class="active" href="./index.html">Home</a>
-                <a href="./photos.html">Photos</a>
-            </div>
-        </nav>
+    <!-- Nav System -->
+    <?php
+    include("./inc/inc_nav.php");
+    ?>
 
         <h1>Calvary United</h1>
         <h2>Methodist</h2>
