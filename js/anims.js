@@ -9,6 +9,7 @@ const animsObj = {
     },
     animHome: ()=>{
         const bgIMG = new Image();
+        bgIMG.src = "./img/mainbg.jpg";
         bgIMG.onload = ()=>{
             document.getElementsByTagName("header")[0].style.backgroundImage = "url('./img/mainbg.jpg')";
             const tl = gsap.timeline({defaults:{duration: 1.5, ease: "power4.out"}});
@@ -23,7 +24,6 @@ const animsObj = {
                 "transform":"translateY(0)"
             }, "-=.8")
         }
-        bgIMG.src = "./img/mainbg.jpg";
         
     }
 }

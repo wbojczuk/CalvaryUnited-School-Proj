@@ -28,7 +28,7 @@
         <h1>Calvary United</h1>
         <h2>Methodist</h2>
         <div id="mainButtonWrapper">
-            <a href="http://dwightwatt.com/calvaryumc/bulletin/2-26-23%20Bulletin%20and%20prayer%20list.pdf" target="_blank" class="button-one">Bulletin</a>
+            <a href="<?php echo file_get_contents("./data/bulletin.txt"); ?>" target="_blank" class="button-one">Bulletin</a>
             <a href="https://www.youtube.com/@calvaryunitedmethodistchur3164/videos" target="_blank" class="button-one">Past Sermons</a>
         </div>
     </header>
@@ -92,5 +92,6 @@
             </span>
         </div>
     </section>
+    <?php include("./inc/inc_footer.php"); ?>
 </body>
 </html>

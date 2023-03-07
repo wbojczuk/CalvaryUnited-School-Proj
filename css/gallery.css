@@ -13,6 +13,8 @@
     font-size: 1.5vw;
     padding: 0 1vw;
     position: relative;
+    color: white;
+    text-decoration: none;
 }
 
 #albumBar a::after{

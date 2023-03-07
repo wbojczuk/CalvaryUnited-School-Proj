@@ -216,6 +216,51 @@ header h2{
     font-weight: 300;
 }
 
+footer{
+    background-color: #535E88;
+    padding: 1vw 0;
+}
+#socialContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#socialContainer a{
+    display: inline-block;
+    width: 3vw;
+    margin: 0 0.5vw;
+    position: relative;
+    aspect-ratio: 1/1;
+    background-position: center;
+    background-size: 100%;
+    transition: top 0.3s;
+    top:0;
+}
+#socialContainer a:hover{
+    top: -0.3vw;
+}
+#socialContainer a.youtube{
+    background-image: url("../img/youtube_icon.png");
+}
+#socialContainer a.facebook{
+    background-image: url("../img/facebook_icon.png");
+}
+#footerText{
+    text-align: center;
+    position: relative;
+    padding-top: 1vw;
+}
+#footerText::after{
+    content: "";
+    display: inline-block;
+    width: 25%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 0.5vw;
+    left: 37.5%;
+}
+
 /* MOBILE STYLES */
 @media only screen and (max-width: 600px)  {
     h1{
@@ -256,7 +301,7 @@ header h2{
         width: 100%;
         align-items: center;
         justify-content: center;
-        bottom: 10vh;
+        bottom: 20vh;
         left: 0;
     }
     
@@ -321,5 +366,20 @@ header h2{
     }
     #pastorWrapper span{
         width: 80%;
+    }
+    footer{
+        padding: 1vh 0;
+    }
+    #socialContainer a{
+        width: 5vh;
+        margin: 0 0.5vh;
+    }
+    #footerText{
+        padding-top: 2vh;
+    }
+    #footerText::after{
+        width: 50%;
+        top: 1vh;
+        left: 25%;
     }
 }
