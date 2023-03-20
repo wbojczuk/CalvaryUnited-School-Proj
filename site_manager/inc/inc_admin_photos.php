@@ -1,4 +1,6 @@
 <?php
+// PHP File to manage the Photo Gallery
+
 // ACTIONS 
 if(isset($_GET["action"])){
     if($_GET['action'] == "savedata"){

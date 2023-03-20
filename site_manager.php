@@ -15,13 +15,15 @@ $page = (isset($_GET["page"])) ? $_GET["page"] : "home" ;
     <link href="https://fonts.googleapis.com/css2?family=Hurricane&family=Kanit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./site_manager/css/site_manager.css">
     <?php
+    // Add gallery CSS if photos are selected
     if($page == "photos"){
         echo '<link rel="stylesheet" href="./css/gallery.css">';
     }
     ?>
-    <script src="./site_manager/js/jsdev.min.js"></script>
+    <script src="./js/jsdev.min.js"></script>
 </head>
 <body>
+    <!-- Side Nav -->
     <nav>
         <div id="navLogo">Admin</div>
         <div class="tools-title">Dashboard</div>
@@ -32,9 +34,11 @@ $page = (isset($_GET["page"])) ? $_GET["page"] : "home" ;
 
     <div id="mainContent">
     <?php
+    // Login Prompt
         if(!isset($_SESSION["login"])){
             include("./site_manager/inc/inc_login_form.php");
         }else{
+    // Content
             $word_page = ucwords($page);
             echo "<div id='pageTitle'>$word_page</div>";
             include("./site_manager/inc/inc_admin_$page.php");

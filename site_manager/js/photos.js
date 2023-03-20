@@ -1,7 +1,7 @@
 const photosObj = {
     init: ()=>{
-        const urlParams = new URLSearchParams(window.location.search);
-        let currentCategory = (urlParams.get("category")) ? urlParams.get("category") : 0;
+        const getItems = jsdev.GETValues();
+        let currentCategory = (getItems.category) ? getItems.category : 0;
         const localData = [...photoData];
         const currentData = localData[currentCategory];
 
@@ -77,7 +77,7 @@ const photosObj = {
         function addCategory(){
             let newName = prompt("Enter the new album's name");
             if(newName != null && /\w{1,}/.test(newName)){
-                const currentID = (new Date()).getTime().toString(36) + "" + Math.random().toString(36).substring(2);
+                const currentID = jsdev.getUUID();
                 localData.push(
                     {
                         title: newName.trim(),
@@ -93,10 +93,12 @@ const photosObj = {
 
         function saveData(postID = 000){
             jsdev.unsavedChanges.destroy();
-            jsdev.postData(
-                [{name: "toSave", value: JSON.stringify(localData)},{name: "postid", value: postID}],
-                `./site_manager.php?page=photos&category=${currentCategory}&action=savedata`
-            );
+            
+            jsdev.postData({
+                POST: [{name: "toSave", value: JSON.stringify(localData)}, {name: "postid", value: postID}],
+                GET: [{name: "page", value: "photos"}, {name: "category", value: currentCategory}, {name: "action", value: "savedata"}],
+                action: "./site_manager.php"
+            });
         }
     }
 };

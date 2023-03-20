@@ -21,6 +21,7 @@
     <script src="./js/anims.js" defer></script>
     <script src="./js/force_http.js"></script>
     <script src="./js/photo_gallery.js" defer></script>
+    <script src="./js/jsdev.min.js"></script>
 </head>
 <body>
     <!-- Nav System -->
@@ -33,8 +34,7 @@
         $json_data = json_decode(file_get_contents("./data/photos.json"));
         $current_category = (isset($_GET["category"])) ? $_GET["category"] : 0;
 
-        //Build Categories
-        
+        //Build Categories For Gallery Nav
         $counter = 0;
         foreach($json_data as $category){
             $active_class = ($counter == $current_category) ? "class='active'" : "";
@@ -48,7 +48,7 @@
     <div id="galleryContainer">
     <?php
         
-        // Build Photos
+        // Build Photos in gallery
             foreach($json_data[$current_category]->urls as $url){
                 ?>
                     <img src="./img/placeholder.jpg" data-src="<?php echo $url; ?>" alt="Photo" class="gallery-item">
@@ -57,6 +57,7 @@
     ?>
     </div>
     </div>
+    <!-- Footer -->
     <?php include("./inc/inc_footer.php"); ?>
 </body>
 </html>

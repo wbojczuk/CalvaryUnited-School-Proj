@@ -20,11 +20,12 @@
 </head>
 <body>
     <header>
-    <!-- Nav System -->
-    <?php
-    include("./inc/inc_nav.php");
-    ?>
+        <!-- Nav System -->
+        <?php
+        include("./inc/inc_nav.php");
+        ?>
 
+        <!-- Landing Page -->
         <h1>Calvary United</h1>
         <h2>Methodist</h2>
         <div id="mainButtonWrapper">
@@ -33,6 +34,7 @@
         </div>
     </header>
 
+    <!-- Service Times Section -->
     <section id="timesSection">
         <h2>Service Times</h2>
         <div id="timesGrid">
@@ -71,6 +73,7 @@
         </div>
     </section>
 
+    <!-- Location Section -->
     <section id="locationSection">
         <h2>Location</h2>
         <div class="location">
@@ -79,6 +82,7 @@
         </div>
     </section>
 
+    <!-- Meet the Pastor Section -->
     <section id="pastorSection">
         <h2>Meet the Pastor</h2>
         <h4>Tom Tidwell</h4>
@@ -92,6 +96,7 @@
             </span>
         </div>
     </section>
+    <!-- Footer -->
     <?php include("./inc/inc_footer.php"); ?>
 </body>
 </html>
