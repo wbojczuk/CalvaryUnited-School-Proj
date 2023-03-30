@@ -17,6 +17,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/nav.js" defer></script>
     <script src="./js/anims.js" defer></script>
+    <script src="https://beta.ourmanna.com/verses/api/js/" type="text/javascript" defer></script>
 </head>
 <body>
     <header>
@@ -84,6 +85,15 @@
 
     <!-- Meet the Pastor Section -->
     <section id="pastorSection">
+    <div class="center">
+        <div id="dailyBibleVerseContainer">
+            <div class="title">Daily Bible Verse</div>
+            
+                <div id="ourmanna-verse">Verse Loading...</div>
+        </div>
+</div>
+
+        </div>
         <h2>Meet the Pastor</h2>
         <h4>Tom Tidwell</h4>
 

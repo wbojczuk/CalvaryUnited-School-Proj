@@ -190,6 +190,38 @@ header h2{
 
 #pastorSection{
     color: black;
+    background-color: #F9F9F9;
+}
+#dailyBibleVerseContainer::after{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 120%;
+    height: 1px;
+    left:-10%;
+    bottom:-3vw;
+    background-color: #ccc;
+}
+#dailyBibleVerseContainer{
+    margin: 6vw 0;
+    display: inline-block;
+    width: 40%;
+    position: relative;
+}
+#dailyBibleVerseContainer .title{
+    text-align: center;
+    font-size: 4vw;
+    margin: 1vw 0;
+    font-family: "Hurricane", cursive;
+}
+#mannaverse{
+    font-size: 1.2vw;
+}
+#mannaverse-reference{
+    text-align: right;
+    padding-right: 10%;
+    padding-top: 1vw;
+    font-size: 1.1vw;
 }
 
 #pastorSection h2{
@@ -357,6 +389,24 @@ footer{
 
     #pastorSection h4{
         font-size: 2vh;
+    }
+    #dailyBibleVerseContainer::after{
+        bottom:-3vh;
+    }
+
+    #dailyBibleVerseContainer{
+        margin: 6vh 0;
+        width: 80%;
+    }
+    #dailyBibleVerseContainer .title{
+        font-size: 4.5vh;
+    }
+    #mannaverse{
+        font-size: 1.5vh;
+    }
+    #mannaverse-reference{
+        padding-top: 1vh;
+        font-size: 1.8vh;
     }
     #pastorWrapper{
         font-size: 1.5vh;
