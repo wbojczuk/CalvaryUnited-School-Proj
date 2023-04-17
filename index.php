@@ -78,8 +78,7 @@
     <section id="locationSection">
         <h2>Location</h2>
         <div class="location">
-            421 South Main Street <br> Swainsboro, GA <br>
-                30401478-237-2191 Office
+            421 South Main Street <br> Swainsboro, GA 3040 <br> 1478-237-2191 Office
         </div>
     </section>
 

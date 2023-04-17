@@ -376,6 +376,7 @@ footer{
     #locationSection h2{
         width: 100%;
         border-right: none;
+        padding-right: 0;
     }
     #locationSection h2::after{
         left:18%;
