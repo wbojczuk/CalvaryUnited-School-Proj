@@ -78,7 +78,7 @@
     <section id="locationSection">
         <h2>Location</h2>
         <div class="location">
-            421 South Main Street <br> Swainsboro, GA 3040 <br> 1478-237-2191 Office
+            <a href="https://goo.gl/maps/uwv5riaRLTi6Tdo36" target="_blank"> 421 South Main Street <br> Swainsboro, GA 3040 </a><br> <a href="tel:478-237-2191">478-237-2191</a> Office
         </div>
     </section>
 
@@ -87,10 +87,9 @@
     <div class="center">
         <div id="dailyBibleVerseContainer">
             <div class="title">Daily Bible Verse</div>
-            
-                <div id="ourmanna-verse">Verse Loading...</div>
+            <div id="ourmanna-verse">Verse Loading...</div>
         </div>
-</div>
+    </div>
 
         </div>
         <h2>Meet the Pastor</h2>
